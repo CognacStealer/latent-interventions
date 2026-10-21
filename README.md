@@ -66,7 +66,7 @@ it incoherent. The cost term is what stops the search cheating.
 | `Coding/pythia.py` | `transformer_lens` basics: `run_with_cache`, reading `blocks.4.hook_resid_post`, and a hook that adds a *random* direction to prove the plumbing works |
 | `Coding/steer.py` | Contrastive Activation Addition on Pythia-70M — builds a sycophancy steering vector from paired agree/disagree completions and subtracts it at generation time |
 | `Coding/evaluate.py` | The quantitative fitness function described above |
-| `Coding/evals/sycophancy/` | The eval set |
+| `Coding/evals/sycophancy/` | The eval set (see Data below) |
 
 ## The roadmap, briefly
 
@@ -95,6 +95,13 @@ python evaluate.py         # score an intervention numerically
 Pythia-70M is small enough to run on CPU, slowly. The whole point of starting
 there is that iteration speed beats scale while the machinery is still being
 debugged.
+
+## Data
+
+The three files in `Coding/evals/sycophancy/` are unmodified copies of the sycophancy
+evaluations from Anthropic's [model-written evals](https://github.com/anthropics/evals)
+(Perez et al., 2022, *Discovering Language Model Behaviors with Model-Written Evaluations*),
+used under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence.
 
 ## Status
 
